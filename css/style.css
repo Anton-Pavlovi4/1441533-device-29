@@ -18,6 +18,7 @@
   --basic-black-ultra: rgba(0, 0, 0, 0.18);
   --basic-perfict-white: rgba(230,230,230,0.8);
   --basic-lower-shadows: rgba(0, 0, 0, 0.4);
+  --basic-silver-color: #C4C4C4;
 
   --special-yellow: #F7E296;
   --special-green: #91C92F;
@@ -1209,6 +1210,36 @@ body {
   }
 }
 
+.btn-sort {
+  position: relative;
+  border: none;
+  background-color: transparent;
+  width: 20px;
+  height: 14px;
+  cursor: pointer;
+}
+
+.btn-sort:before {
+  position: absolute;
+  display: block;
+  top: 0;
+  left: 0;
+  content: '';
+  width: 0;
+  height: 0;
+  border-style: solid;
+}
+
+.btn_increase:before {
+  border-width: 0 10px 14px 10px;
+border-color: transparent transparent var(--basic-black) transparent;
+}
+
+.btn_decrease:before {
+  border-width: 14px 10px 0 10px;
+  border-color: var(--basic-black) transparent transparent transparent;
+}
+
 .product-item a::before {
   background-color: var(--special-yellow)
 }
@@ -1917,6 +1948,7 @@ body {
   opacity: 1;
 }
 
+
 .input-search:focus + .search-site,
 .search-site:hover {
   display: block;
@@ -2073,7 +2105,7 @@ body {
   height: 4px;
   padding: 0;
   border:  8px solid var(--basic-white);
-  background: #C4C4C4;
+  background: var(--basic-silver-color);
   border-radius: 50%;
   box-shadow: 0px 2px 2px var(--basic-black-ultra);
   cursor: pointer;
@@ -2204,7 +2236,7 @@ body {
   font-size: 18px;
   line-height: 22px;
   font-family: "Gilroy", "Arial", sans-serif;
-  color: #000;
+  color: var(--basic-black);
   cursor: pointer;
 }
 
@@ -2257,7 +2289,7 @@ body {
   padding: 18px 16px 20px 20px;
   resize: none;
   font-family: "Open-sans", "Arial", sans-serif;
-  color: rgba(0, 0, 0, 0.4);
+  color: var(--basic-lower-shadows);
   background-color: var(--basic-input-color);
   height: 130px;
   border: 0;
